@@ -2,33 +2,29 @@
     margin:0;		
     padding:0;		
     box-sizing:border-box;		
-
 }
  
 body {		
-  background-color: aqua;		
+  background-color: rgb(22, 228, 84);	
+  
 }
 
-
-         
-    
-   
 header nav{
             margin-top: 25px;
              border: 2px solid black;
     }
        
  header nav ul li {		
-            background-color: aqua;		
+            background-color: rgb(87, 140, 175);		
             display: inline-block;		
              padding: 15px;		
     }		
-a{ 	
-     text-decoration: none;	
-     color: black;	
-    font-family: Arial, Helvetica, sans-serif;	
-    font-size: 20px; 	
-     } 
+    a{ 	
+      text-decoration: none;	
+      color: black;	
+     font-family: Arial, Helvetica, sans-serif;	
+     font-size: 20px; 	
+      } 
      
         
         /* estilos main*/		
@@ -38,52 +34,73 @@ a{
         
 main h1{		
         margin: bottom 10px;		
-        background-color: rgb(128, 128, 151);		
-        font-size: 20px;		
-         text-align: left;		
+        background-color: rgb(122, 196, 54);		
+        font-size: 40px;		
+         text-align: center;		
     }	
 
 main p{		
       font-size: 25px;		
-     margin-bottom: 25px;		
+     margin-bottom: 15px;		
      }		
 
-/* estilos footer con flex*/
+
+ 
 
     
+  /* estilos para pc   */ 
+    @media screen and (min-width:1024px) 
+      body {
+            background-color:rgb(52, 52, 241);
+           }
 
-            /* estilos del contenedor o padre  */
-     footer .pie-de-pagina{
-    display: flex;  
-    flex-wrap: nowrap; 
-    justify-content:space-evenly;
-    align-content: center;
-    background-color:rgb(127, 197, 255);
-    flex-direction: row;
+    /* estilos para pc page/servicios con grid */ 
 
-    
-  }     
-  footer .p{
-    front: size 5px;
-  }
-  
-          /* estilos de  los hijos   */
-  footer .redes-sociales{
-    font-size: 20px;
-    width: 500px;
-    height: 500px;
-  }                               
+             /* estilos para CONTENEDOR con grid */
+             .servicioscontenedor{
+              padding: 10px;
+              background-color: tomato;
+              
+              /* propiedades de grid*/
+              display: grid;
+          
+              /* propiedad columnas */
+              grid-template-columns: repeat(3, 1fr);
+          
+              /* propiedad filas*/
+              grid-template-rows: 300px 300px;
+          
+              /* propiedad para los espacios */
+              gap: 10px;
+              
+              justify-items: center;
+              align-items: center;
+          }
+           /* estilos para hijo con grid */
+               .titulo-uno{
+                    height:100px ;
+                    align-items: center;
+                    
+          }
+                  
+     /*estilos footer*/
 
 
-  /* estilos pages amigos   */ no funciona
-     main .fotos-de-amigos { 
-      width: 500px;
-      height: 500px;
+     
+     
+
+     .titulofooter{
+      background-color: rgb(160, 235, 160);
+      font-size: 30px;
+      display: flex;
+      
 
      }
-
-     @media screen and (min-width:1024px) {
-      body {
-            background-color:tomato;
-           }
+     footer ul{
+      background-color: rgb(20, 99, 46);
+      display: flex;
+      flex-wrap: rap;
+      gap: 100px;
+      list-style: none;
+      flex-wrap: wrap;
      }
